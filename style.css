@@ -101,7 +101,7 @@
 
         #section2 {
             display: flex;
-            margin: auto;
+            margin:10px auto;
             gap: 10px;
             max-width: 90%;
         }
@@ -131,7 +131,7 @@
             max-width: 90%;
             /* gap: 5px; */
             /* margin-top: 10px; */
-            margin: auto;
+            margin: 10px auto;
             overflow: auto;
         }
 
