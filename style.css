@@ -1,6 +1,7 @@
-        body{
-            background-color: #cdcdcd;
+        body {
+            background-color: rgb(231, 231, 231);
         }
+
         a {
             display: flex;
             align-items: center;
@@ -31,7 +32,7 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
-            margin: 5px;
+            /* margin: 5px; */
             margin-bottom: 0%;
             padding: 5px;
             /* flex-wrap: wrap; */
@@ -76,54 +77,116 @@
         }
 
         #section1 {
-            margin: 5px;
+            /* margin: 5px; */
             margin-top: 0%;
             display: flex;
+            gap: 40px;
             background-color: white;
             justify-content: center;
             overflow: auto;
+            /* scrollbar-width: none; */
 
         }
 
-        .category{
+        .category {
             width: 100px;
             height: 120px;
-            border: 1px solid black;
-            border-right: none;
+            padding: 10px;
+            /* border: 1px solid black; */
+            /* border-right: none; */
             flex-shrink: 0;
-            
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
         }
 
-        .category:last-child{
-            border-right: 1px solid black;
+        .category img {
+            width: 70px;
+
         }
+
+        .category p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: small;
+
+        }
+
+        /* .category:last-child{
+            border-right: 1px solid black;
+        } */
 
 
         #section2 {
             display: flex;
-            margin:10px auto;
+            margin: 10px auto;
             gap: 10px;
             max-width: 90%;
+        }
+
+        .container2 {
+            display: flex;
+            flex-direction: column;
+            overflow: auto;
+            flex: 1;
+            /* height: 400px; */
+            min-width: 0;
+        }
+
+        .deals {
+            /* flex-basis: 80%; */
+            /* align-self: flex-start; */
+            height: 70px;
+            background-color: rgb(255, 255, 255);
+            border-bottom: 2px solid #cdcdcd;
+            overflow: hidden;
+            /* flex-wrap: nowrap; */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px;
+
+        }
+
+        .deals p {
+            margin: 0;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold
         }
 
         .Items_1 {
             display: flex;
             /* gap: 5px; */
-            overflow: auto;
+            overflow-x: auto;
             /* flex-wrap: nowrap; */
             /* max-width: 80%; */
             /* visibility: hidden; */
             flex: 1 1 80%;
             min-width: 0;
+
+            /* align-self: flex-end; */
         }
 
+
+
         .ads {
-            background-color: salmon;
-            border: 2px solid black;
-            border-radius: 5px;
-            height: 300px;
+            background-color: white;
+            /* border: 2px solid black; */
+            /* border-radius: 5px; */
+            height: 390px;
             width: 280px;
             flex-shrink: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ads img {
+            width: 95%;
+
         }
 
         #section3 {
@@ -135,23 +198,53 @@
             overflow: auto;
         }
 
+        .Items_2 {
+            display: flex;
+            overflow: auto;
+            min-width: 0;
+        }
+
         .cards {
             background-color: white;
-            height: 300px;
-            border: 2px solid green;
-            border-right: none;
-            border-radius: 5px;
+            height: 320px;
+            /* border: 2px solid green; */
+            border-right: 2px solid #cdcdcd;
+            /* border-radius: 5px; */
             width: 300px;
             flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
 
         }
 
         .cards:last-child {
-            border-right: 2px solid green;
+            border-right: none;
+        }
+
+        .cards img {
+            width: 58%;
+
+        }
+
+        .titles {
+            font-size: 15px;
+        }
+
+        .discounts {
+            color: green;
+            font-size: 16px;
+        }
+
+        .descriptions {
+            color: grey;
+            font-size: 13px;
         }
 
         @media (max-width : 950px) {
-            
+
             #section1 {
                 justify-content: space-around;
             }
@@ -160,36 +253,64 @@
         @media (max-width : 600px) {
 
             .top_section {
+                padding: 12px;
                 flex-direction: column;
-                gap: 5px;
+                gap: 7px;
                 justify-content: center;
+                align-items: center;
 
+            }
+
+            .search {
+                justify-content: space-between;
             }
 
             .navbar {
                 margin: auto;
-                width: fit-content;
+                /* margin-bottom: 0; */
+                /* width: fit-content; */
+                padding: 0;
             }
 
 
 
             a {
                 padding: 10px 3vw;
+                /* margin: 0; */
             }
 
             #section2 {
                 flex-direction: column;
-                gap: 0;
+                gap: 10px;
                 flex-basis: 90%;
             }
 
             .cards {
                 width: 200px;
-                height: 200px;
+                height: 220px;
 
             }
 
+            .cards img {
+                width: 55%;
+            }
+
+            .titles {
+                font-size: 10px;
+            }
+
+            .discounts {
+                color: green;
+                font-size: 10px;
+            }
+
+            .descriptions {
+                color: grey;
+                font-size: 9px;
+            }
+
             .ads {
+                display: none;
                 height: 200px;
                 width: 200px;
                 margin: auto;
